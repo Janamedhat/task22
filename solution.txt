@@ -1,0 +1,87 @@
+osc@osc:~$ git config user.name
+janamedhat
+osc@osc:~$ git config user.email
+janamedhat577@gmail.com
+osc@osc:~$ git clone "https://github.com/Janamedhat/task22.git"
+osc@osc:~$ cd task22/
+osc@osc:~/task22$ mkdir task-2
+osc@osc:~/task22$ cd task-2/
+osc@osc:~/task22/task-2$ touch greeting.txt
+osc@osc:~/task22/task-2$ echo "hello world">> greeting.txt
+osc@osc:~/task22/task-2$ git status
+osc@osc:~/task22/task-2$ git add greeting.txt
+osc@osc:~/task22/task-2$ git status
+osc@osc:~/task22/task-2$ git commit -m "added greeting"
+osc@osc:~/task22/task-2$ git log
+osc@osc:~/task22/task-2$ cd ..
+osc@osc:~/task22$ git branch intro
+osc@osc:~/task22$ cd task-2/
+osc@osc:~/task22/task-2$ echo "I love git">> greeting.txt
+osc@osc:~/task22/task-2$ cat greeting.txt
+hello world
+I love git
+osc@osc:~/task22/task-2$ git log
+osc@osc:~/task22/task-2$ git commit -m"added i love git"
+osc@osc:~/task22/task-2$ git checkout intro
+osc@osc:~/task22/task-2$ git commit -m"added i love git"
+osc@osc:~/task22/task-2$ git add greeting.txt
+osc@osc:~/task22/task-2$ git commit -m"added i love git"
+osc@osc:~/task22/task-2$ git log
+commit cdacd8f2a8a76f71d8801711d7417f7d2a9bc07c (HEAD -> intro)
+Author: janamedhat <janamedhat577@gmail.com>
+Date:   Sat Aug 17 20:31:23 2024 +0300
+
+    added i love git
+
+commit 67e57937d69c2fe7d6f7dd84840e6aecb6c236e8 (main)
+Author: janamedhat <janamedhat577@gmail.com>
+Date:   Sat Aug 17 19:26:39 2024 +0300
+
+    added greeting
+
+commit ed05eadcf5de7d7d46860fdccebb3b93668d3420 (origin/main, origin/HEAD)
+Author: Janamedhat <janamedhat577@gmail.com>
+Date:   Sat Aug 17 17:58:46 2024 +0300
+
+    Initial commit
+osc@osc:~/task22/task-2$ git merge intro
+osc@osc:~/task22/task-2$ git log
+commit cdacd8f2a8a76f71d8801711d7417f7d2a9bc07c (HEAD -> main, intro)
+Author: janamedhat <janamedhat577@gmail.com>
+Date:   Sat Aug 17 20:31:23 2024 +0300
+
+    added i love git
+
+commit 67e57937d69c2fe7d6f7dd84840e6aecb6c236e8
+Author: janamedhat <janamedhat577@gmail.com>
+Date:   Sat Aug 17 19:26:39 2024 +0300
+
+    added greeting
+
+commit ed05eadcf5de7d7d46860fdccebb3b93668d3420 (origin/main, origin/HEAD)
+Author: Janamedhat <janamedhat577@gmail.com>
+Date:   Sat Aug 17 17:58:46 2024 +0300
+
+    Initial commit
+osc@osc:~/task22/task-2$ git tag -a v1
+osc@osc:~/task22/task-2$ cd ~
+osc@osc:~$ git remote add task22 https://github.com/Janamedhat/task22.git
+osc@osc:~$ git remote
+osc@osc:~$ git branch -m main
+osc@osc:~$ git remote rm origin
+osc@osc:~$ git remote
+osc@osc:~$ git remote add origin https://github.com/Janamedhat/task22.git
+osc@osc:~$ git branch -m main
+osc@osc:~$ cd task22
+osc@osc:~/task22$ git push -u origin main
+osc@osc:~/task22$ git config --global credentials.helper store
+osc@osc:~/task22$ git clone https://github.com/Janamedhat/task22.git
+osc@osc:~/task22$ gh auth login
+osc@osc:~/task22$ git config --global credentials.helper store
+osc@osc:~/task22$ git log --oneline
+cdacd8f (HEAD -> main, tag: v1, origin/main, origin/HEAD, intro) added i love git
+67e5793 added greeting
+ed05ead Initial commit
+osc@osc:~/task22$ 
+
+
